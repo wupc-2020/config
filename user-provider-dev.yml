@@ -1,0 +1,20 @@
+server:
+  port: 18081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: admin
+  application:
+    name: user-provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+    registry-fetch-interval-seconds: 30
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 150
+    lease-renewal-interval-in-seconds: 30
